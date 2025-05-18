@@ -21,7 +21,7 @@ if "response" not in st.session_state:
 
 # GPT 응답 생성 함수
 def get_gpt_response(emotion, reason):
-    prompt = f"지금 '{emotion}'이라는 감정을 느끼고 있어요. 그 이유는 '{reason}' 때문이에요. 이 아이는 초등학생이고, 동갑내기 여학생 하루가 말하는 것처럼 따뜻하고 다정하게 반응해주세요. 반드시 친구처럼 반말을 사용하세요."
+    prompt = f"지금 '{emotion}'이라는 감정을 느끼고 있어요. 그 이유는 '{reason}' 때문이에요. 이 아이는 초등학생이고, 동갑내기 여학생 하루가 말하는 것처럼 따뜻하고 다정하게 반응해주세요. 공감의 언어를 반드시 한 번 이상 포함해주세요. 반드시 친구처럼 반말을 사용하세요."
     response = openai.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
