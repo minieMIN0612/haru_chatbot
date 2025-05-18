@@ -43,7 +43,7 @@ if st.session_state.emotion_stage == "ask_emotion":
 elif st.session_state.emotion_stage == "ask_reason":
     st.write(f"👧 하루: 왜 '{st.session_state.emotion}' 같은 기분이 드는 것 같아?")
     reason_input = st.text_input("여기에 이유를 적어줘:", key="reason_input")
-    if st.button("하루에게 말 걸기") and reason_input.strip():
+    if st.button("하루의 대답 듣기") and reason_input.strip():
         st.session_state.reason = reason_input.strip()
         with st.spinner("하루가 생각 중이에요..."):
             st.session_state.response = get_gpt_response(
