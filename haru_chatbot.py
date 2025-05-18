@@ -52,7 +52,7 @@ if st.session_state.emotion_stage == "ask_emotion":
         st.rerun()
 
 elif st.session_state.emotion_stage == "ask_reason":
-    st.write(f"💁🏻‍♀️ 하루: 왜 '{st.session_state.emotion}' 같은 기분이 드는 것 같아?")
+    st.write(f"🙋🏻‍♀️ 하루: 왜 '{st.session_state.emotion}' 같은 기분이 드는 것 같아?")
     reason_input = st.text_input("여기에 이유를 적어줘:", key="reason_input")
     if st.button("하루의 대답 듣기") and reason_input.strip():
         st.session_state.reason = reason_input.strip()
@@ -64,7 +64,7 @@ elif st.session_state.emotion_stage == "ask_reason":
         st.rerun()
 
 elif st.session_state.emotion_stage == "show_response":
-    st.success("🙆🏻‍♀️ 하루의 대답:")
+    st.success("🙋🏻‍♀️ 하루의 대답:")
     st.write(st.session_state.response)
     if st.button("↩️ 다시 시작하기"):
         for key in ["emotion_stage", "emotion", "reason", "response"]:
