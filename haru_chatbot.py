@@ -2,9 +2,9 @@ import streamlit as st
 import openai
 
 # 페이지 설정
-st.set_page_config(page_title="하루와 대화하기", page_icon="👩🏻")
-st.title("👩🏻 하루가 들어줄게요!")
-st.write("SEL 감정 대화 친구, 하루와 함께 지금의 기분을 나눠보아요!")
+st.set_page_config(page_title="하루와 마음 나누기", page_icon="👩🏻")
+st.title("👩🏻 하루에게 말을 걸어봐!")
+st.write("오늘 어땠어? 지금의 기분을 함께 나눠보자!")
 
 # ✅ secrets에서 API 키 가져오기
 openai.api_key = st.secrets["OPENAI_API_KEY"]
